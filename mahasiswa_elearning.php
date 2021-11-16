@@ -26,6 +26,11 @@ Mohon dipastikan saat presensi sesuai Jam, tanggal, dan hari yang ditetapkan.
 
 Presensi yang lewat/kegagalan dalam presensi *hanya dapat disetting ulang oleh dosen pengampu matakuliah*';
 
+// $f = strtolower('Putdown here');
+// $jawabf = 'putdown here';
+
+// $g = strtolower('putdown here');
+// $jawabg = 'putdown here';
 
 $h = strtolower('LIVE CHAT ADMIN');
 $jawabh = 'Sebelum menggunakan Fitur LiveChat admin, 
@@ -61,13 +66,13 @@ case $e;$jawabe;
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$e' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
 global_text($sender,$jawabe);mysqli_query($db, $update);break;
 
-case $f;$jawabf;
-$update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$f' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-global_text($sender,$jawabf);mysqli_query($db, $update);break;
+// case $f;$jawabf;
+// $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$f' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
+// global_text($sender,$jawabf);mysqli_query($db, $update);break;
 
-case $g;$jawabg;
-$update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$g' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-global_text($sender,$jawabg);mysqli_query($db, $update);break;
+// case $g;$jawabg;
+// $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$g' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
+// global_text($sender,$jawabg);mysqli_query($db, $update);break;
 
 case $h;$jawabh; //Live Chat Admin
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$h' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
