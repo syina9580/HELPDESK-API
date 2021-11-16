@@ -5,7 +5,7 @@ $jawaba = 'Untuk proses reset password, mohon menunggu....
 
 *Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
-$b = strtolower('data nama tidak sesuai');
+$b = strtolower('Data nama tidak sesuai');
 $jawabb = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
@@ -14,24 +14,18 @@ $c = strtolower('Data Tanggal Lahir tidak sesuai');
 $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
-$d = strtolower('Transkrip Nilai tidak sesuai');
-$jawabd = 'Kami hanya melayani transkrip nilai yang bermasalah, untuk kebutuhan cetak transkrip, silahkan hubungi fakultas.
 
-';
-$e = strtolower('Pengajuan Cuti Mahasiswa');
-$jawabe = 'Kami hanya melayani CUTI silahkan hubungi fakultas.
+$d = strtolower('Data Matakuliah tidak sesuai');
+$jawabd = 'Mohon mengirimkan foto *KTP* saudara
 
-';
-$f = strtolower('Panduan Pengajuan Judul Skripsi');
-$jawabf = '*Panduan pengajuan judul skripsi dapat dilihat pada laman*
+*Mohon menunggu jawaban, agar dapat segera diproses*';
 
-http://uinws.link/pengajuanjudulskripsi';
+$e = strtolower('Presensi Mahasiswa');
+$jawabe = 'Jika Mahasiswa tidak dapat melakukan presensi, mohon diakses dengan *Laptop*.
+Mohon dipastikan saat presensi sesuai Jam, tanggal, dan hari yang ditetapkan.
 
-$g = strtolower('Pengajuan Judul Skripsi Kembali');
-$jawabg = 'Jika saudara sudah pernah mengajukan judul, kemudian ingin mengajukan judul kembali.
-Mohon konfirmasi Kaprodi untuk *menolak Judul Skripsi yang diajukan sebelumnya.*
+Presensi yang lewat/kegagalan dalam presensi *hanya dapat disetting ulang oleh dosen pengampu matakuliah*';
 
-*Setelah ditolak judul sebelumnya, ajukan kembali judul baru*';
 
 $h = strtolower('LIVE CHAT ADMIN');
 $jawabh = 'Sebelum menggunakan Fitur LiveChat admin, 
