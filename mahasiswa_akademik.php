@@ -15,13 +15,11 @@ $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 $d = strtolower('Transkrip Nilai tidak sesuai');
-$jawabd = 'Kami hanya melayani transkrip nilai yang bermasalah, untuk kebutuhan cetak transkrip, silahkan hubungi fakultas.
+$jawabd = 'Kami hanya melayani transkrip nilai yang bermasalah, untuk kebutuhan cetak transkrip, silahkan hubungi fakultas.';
 
-';
 $e = strtolower('Pengajuan Cuti Mahasiswa');
-$jawabe = 'Kami hanya melayani CUTI silahkan hubungi fakultas.
+$jawabe = 'Kami hanya melayani CUTI silahkan hubungi fakultas.';
 
-';
 $f = strtolower('Panduan Pengajuan Judul Skripsi');
 $jawabf = '*Panduan pengajuan judul skripsi dapat dilihat pada laman*
 
@@ -91,9 +89,12 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    // $list = ',';
-    // $jawab =  "Layanan Mahasiswa Akademik";
-    // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
+    $list = 'Lupa password,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,';
+        $list = $list.'Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,Panduan Pengajuan Judul Skripsi,';
+        $list = $list.'Pengajuan Judul Skripsi Kembali,Pelayanan Otomasi,';
+        $list = $list.'LIVE CHAT ADMIN,MENU AWAL';
+        $jawab =  "Berikut Layanan Yang tersedia";
+        global_list($sender,$list,"Layanan WALISIADIK",$jawab);
     break;
 }
 ?>
