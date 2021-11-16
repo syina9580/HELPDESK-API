@@ -15,17 +15,6 @@ $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$d = strtolower('Transkrip Nilai Tidak Sesuai');
-$jawabd = 'Kami hanya melayani transkrip nilai yang bermasalah, untuk kebutuhan cetak transkrip, silahkan hubungi fakultas.
-
-*Silahkan mengirimkan Transkrip saudara yang bermasalah*';
-
-$e = strtolower('Pengajuan Cuti Mahasiswa');
-$jawabe = '*Alur Pengajuan Cuti Kuliah secara Online*
-Silahkan dilihat pada laman http://uinws.link/ajukancuti
-
-Tetap semangat dan jaga kesehatan. Terima kasih telah menghubungi kami.';
-
 
 $f = strtolower('Panduan Pengajuan Judul Skripsi');
 $jawabf = '*Panduan pengajuan judul skripsi dapat dilihat pada laman*
@@ -87,9 +76,7 @@ global_text($sender,$jawabg);mysqli_query($db, $update);break;
 
 case $y;$jawaby; //Live Chat Admin
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$h' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-global_text($sender,$jawaby);
-global_text('6282213466995','Ada Live Chat Menunggu dari '.$sender);
-// global_forward($sender,'6281217181715','Ada Live Chat Menunggu dari '.$sender);
+
 mysqli_query($db, $update);break;
 
 case $i;$jawabi;
@@ -101,9 +88,12 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    // $list = ',';
-    // $jawab =  "Layanan Mahasiswa Akademik";
-    // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
+    $list = 'Lupa password,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,';
+        $list = $list.'Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,Panduan Pengajuan Judul Skripsi,';
+        $list = $list.'Pengajuan Judul Skripsi Kembali,Pelayanan Otomasi,';
+        $list = $list.'LIVE CHAT ADMIN,MENU AWAL';
+        $jawab =  "Berikut Layanan Yang tersedia";
+        global_list($sender,$list,"Layanan WALISIADIK",$jawab);
     break;
 }
 ?>
