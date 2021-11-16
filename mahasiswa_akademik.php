@@ -78,8 +78,8 @@ global_text($sender,$jawabg);mysqli_query($db, $update);break;
 case $h;$jawabh; //Live Chat Admin
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$h' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
 global_text($sender,$jawabh);
-global_text('6282213466995','Ada Live Chat Menunggu dari '.$sender);
-// global_forward($sender,'6281217181715','Ada Live Chat Menunggu dari '.$sender);
+global_text($admin,'Ada Live Chat Menunggu dari '.$sender);
+// global_forward($sender,$admin,'Ada Live Chat Menunggu dari '.$sender);
 mysqli_query($db, $update);break;
 
 case $i;$jawabi;
