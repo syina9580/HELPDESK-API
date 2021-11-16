@@ -1,6 +1,6 @@
 <?php
 $isipesan = $message = strtolower($isipesan);
-$a = strtolower('Lupa password');
+$a = strtolower('Lupa Password');
 $jawaba = 'Untuk proses reset password, mohon menunggu....
 
 *Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
@@ -10,15 +10,16 @@ $jawabb = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$c = strtolower('Data Tanggal Lahir tidak sesuai');
+$c = strtolower('Data Tanggal Lahir Tidak Sesuai');
 $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$d = strtolower('Data Matakuliah tidak sesuai');
-$jawabd = 'Mohon mengirimkan foto *KTP* saudara
+$d = strtolower('Data Matakuliah Tidak Sesuai');
+$jawabd = 'Mohon mengirimkan foto *KTPKTM* saudara.
+*Dimohon mengirimkan foto/screenshot di sistem seperti apa*
 
-*Mohon menunggu jawaban, agar dapat segera diproses*';
+*Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
 $e = strtolower('Presensi Mahasiswa');
 $jawabe = 'Jika Mahasiswa tidak dapat melakukan presensi, mohon diakses dengan *Laptop*.
