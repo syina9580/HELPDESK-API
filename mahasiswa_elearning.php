@@ -5,43 +5,44 @@ $jawaba = 'Untuk proses reset password, mohon menunggu....
 
 *Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
-$b = strtolower('Data Nama Tidak Sesuai');
+$b = strtolower('Data nama tidak sesuai');
 $jawabb = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$c = strtolower('Data Tanggal Lahir tidak sesuai');
+$c = strtolower('Data Tanggal Lahir Tidak Sesuai');
 $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
+$d = strtolower('Data Matakuliah Tidak Sesuai');
+$jawabd = 'Mohon mengirimkan foto *KTPKTM* saudara.
+*Dimohon mengirimkan foto/screenshot di sistem seperti apa*
 
-$f = strtolower('Panduan Pengajuan Judul Skripsi');
-$jawabf = '*Panduan pengajuan judul skripsi dapat dilihat pada laman*
+*Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
-http://uinws.link/pengajuanjudulskripsi';
+$e = strtolower('Presensi Mahasiswa');
+$jawabe = 'Jika Mahasiswa tidak dapat melakukan presensi, mohon diakses dengan *Laptop*.
+Mohon dipastikan saat presensi sesuai Jam, tanggal, dan hari yang ditetapkan.
 
-$g = strtolower('Pengajuan Judul Skripsi Kembali');
-$jawabg = 'Jika saudara sudah pernah mengajukan judul, kemudian ingin mengajukan judul kembali.
-Mohon konfirmasi Kaprodi untuk *menolak Judul Skripsi yang diajukan sebelumnya.*
+Presensi yang lewat/kegagalan dalam presensi *hanya dapat disetting ulang oleh dosen pengampu matakuliah*';
 
-*Setelah ditolak judul sebelumnya, ajukan kembali judul baru*';
+// $f = strtolower('Putdown here');
+// $jawabf = 'putdown here';
 
+// $g = strtolower('putdown here');
+// $jawabg = 'putdown here';
 
-$h = strtolower('Pelayanan Otomasi');
-$jawabh = 'Pelayanan Otomasi dapat di akses di Walisiadik di menu *Pelayanan Otomasi*
-Mahasiswa dapat membuat surat keterangan secara online dan menghubungi Fakultas masing-masing';
-
-$y = strtolower('LIVE CHAT ADMIN');
-$jawaby = 'Sebelum menggunakan Fitur LiveChat admin, 
+$h = strtolower('LIVE CHAT ADMIN');
+$jawabh = 'Sebelum menggunakan Fitur LiveChat admin, 
 Pastikan pertanyaan Anda tidak ada dalam daftar FAQ,
 dan tidak ada di fitur Layanan.
 
 Mari Budayakan membaca :-)
 
 Jangan Balas Pesan Ini. Kami akan segera Terhubung';
-$z = strtolower('MENU AWAL');
-$jawabz = '';
+$i = strtolower('MENU AWAL');
+$jawabi = '';
 $j = strtolower('');
 $jawabj = '';
 
@@ -66,17 +67,19 @@ case $e;$jawabe;
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$e' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
 global_text($sender,$jawabe);mysqli_query($db, $update);break;
 
-case $f;$jawabf;
-$update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$f' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-global_text($sender,$jawabf);mysqli_query($db, $update);break;
+// case $f;$jawabf;
+// $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$f' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
+// global_text($sender,$jawabf);mysqli_query($db, $update);break;
 
-case $g;$jawabg;
-$update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$g' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-global_text($sender,$jawabg);mysqli_query($db, $update);break;
+// case $g;$jawabg;
+// $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$g' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
+// global_text($sender,$jawabg);mysqli_query($db, $update);break;
 
-case $y;$jawaby; //Live Chat Admin
+case $h;$jawabh; //Live Chat Admin
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$h' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-
+global_text($sender,$jawabh);
+global_text($admin,'Ada Live Chat Menunggu dari '.$sender);
+// global_forward($sender,$admin,'Ada Live Chat Menunggu dari '.$sender);
 mysqli_query($db, $update);break;
 
 case $i;$jawabi;
@@ -88,12 +91,9 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    $list = 'Lupa password,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,';
-        $list = $list.'Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,Panduan Pengajuan Judul Skripsi,';
-        $list = $list.'Pengajuan Judul Skripsi Kembali,Pelayanan Otomasi,';
-        $list = $list.'LIVE CHAT ADMIN,MENU AWAL';
-        $jawab =  "Berikut Layanan Yang tersedia";
-        global_list($sender,$list,"Layanan WALISIADIK",$jawab);
+    // $list = ',';
+    // $jawab =  "Layanan Mahasiswa Akademik";
+    // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
     break;
 }
 ?>

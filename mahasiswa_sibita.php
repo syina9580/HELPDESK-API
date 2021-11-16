@@ -5,43 +5,68 @@ $jawaba = 'Untuk proses reset password, mohon menunggu....
 
 *Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
-$b = strtolower('Data Nama Tidak Sesuai');
-$jawabb = 'Mohon mengirimkan foto *KTP* saudara
+$b = strtolower('Data Diri Tidak Sesuai');
+$jawabb = 'Mohon mengirimkan foto *KTP* saudara dan menjelaskan data diri yang tidak sesuai
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$c = strtolower('Data Tanggal Lahir tidak sesuai');
-$jawabc = 'Mohon mengirimkan foto *KTP* saudara
+$c = strtolower('Tidak Dapat Upload File');
+$jawabc = 'Mohon mengirimkan foto *KTP/KTM* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
+$d = strtolower('Dosen Pembimbing Belum Tercantum');
+$jawabd = 'Untuk proses, mohon melengkapi data berikut:
+1. *Foto Kendala di sistem*
+2. *Nama Lengkap beserta Gelar Dosen Pembimbing 1*
+3. *NIP Dosen Pembimbing 1*
+4. Jika ada *Nama Lengkap beserta Gelar Dosen Pembimbing 2*
+5. Jika ada *NIP Dosen Pembimbing 2*
 
-$f = strtolower('Panduan Pengajuan Judul Skripsi');
-$jawabf = '*Panduan pengajuan judul skripsi dapat dilihat pada laman*
+*Mohon menunggu jawaban, agar dapat segera diproses*';
 
-http://uinws.link/pengajuanjudulskripsi';
+$e = strtolower('Prosedur Pengajuan Judul Skripsi');
+$jawabe = '*Panduan pengajuan judul skripsi* dapat dilihat pada laman 
 
-$g = strtolower('Pengajuan Judul Skripsi Kembali');
-$jawabg = 'Jika saudara sudah pernah mengajukan judul, kemudian ingin mengajukan judul kembali.
-Mohon konfirmasi Kaprodi untuk *menolak Judul Skripsi yang diajukan sebelumnya.*
+http://uinws.link/pengajuanjudulskripsi
 
-*Setelah ditolak judul sebelumnya, ajukan kembali judul baru*';
+Silahkan hubungi kami kembali jika mengalami kendala.';
 
+$f = strtolower('Prosedur SIBITA');
+$jawabf = 'Jadi prosedurnya adalah setelah mengajukan judul di akun Walisiadik, mahasiswa mendapatkan dosen pembimbing 1 dan 2. Kemudian melakukan Bimbingan Tugas Akhir di SIBITA.
 
-$h = strtolower('Pelayanan Otomasi');
-$jawabh = 'Pelayanan Otomasi dapat di akses di Walisiadik di menu *Pelayanan Otomasi*
-Mahasiswa dapat membuat surat keterangan secara online dan menghubungi Fakultas masing-masing';
+Untuk mendapatkan dospem 1 dan 2 bagaimana?
+Mengajukan judul di menu "Pengajuan Judul Skripsi" di akun Walisiadik, kemudian konfirmasi ke Dosen Wali dan Kepala Prodi (Jurusan).
+Setelah sudah mendapatkan dospem 1 dan 2, maka mahasiswa dapat melakukan bimbingan secara online melalui SIBITA.
 
-$y = strtolower('LIVE CHAT ADMIN');
-$jawaby = 'Sebelum menggunakan Fitur LiveChat admin, 
+*Untuk login SIBITA bagaimana?*
+Sama dengan username dan password yang mahasiswa gunakan untuk masuk ke akun Walisiadik.
+
+Jika di akun walisiadik pada menu *Pengajuan Judul Skripsi* belum di approve oleh dosen wali dan Kaprodi, *mohon segera menghubungi dan minta konfirmasi validasi.*
+
+Setelah itu baru bisa mendapatkan Dospem 1 dan 2 yang diketahui oleh Prodi.';
+
+$g = strtolower('Daftar SIBITA');
+$jawabg = '*SIBITA (Sistem Bimbingan Tugas Akhir)*
+https://sibita.walisongo.ac.id/
+
+Silahkan isi form dibawah ini untuk *permintaan input di SIBITA:*
+http://uinws.link/sibitauinwalisongo
+
+Mohon menunggu, permintaan anda akan diproses terlebih dahulu.
+Jika dalam 7x24 jam belum ada perubahan, mohon menghubungi kembali. 
+Terimakasih🙏🏻';
+
+$h = strtolower('LIVE CHAT ADMIN');
+$jawabh = 'Sebelum menggunakan Fitur LiveChat admin, 
 Pastikan pertanyaan Anda tidak ada dalam daftar FAQ,
 dan tidak ada di fitur Layanan.
 
 Mari Budayakan membaca :-)
 
 Jangan Balas Pesan Ini. Kami akan segera Terhubung';
-$z = strtolower('MENU AWAL');
-$jawabz = '';
+$i = strtolower('MENU AWAL');
+$jawabi = '';
 $j = strtolower('');
 $jawabj = '';
 
@@ -74,9 +99,11 @@ case $g;$jawabg;
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$g' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
 global_text($sender,$jawabg);mysqli_query($db, $update);break;
 
-case $y;$jawaby; //Live Chat Admin
+case $h;$jawabh; //Live Chat Admin
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$h' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-
+global_text($sender,$jawabh);
+global_text($admin,'Ada Live Chat Menunggu dari '.$sender);
+// global_forward($sender,$admin,'Ada Live Chat Menunggu dari '.$sender);
 mysqli_query($db, $update);break;
 
 case $i;$jawabi;
@@ -88,12 +115,9 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    $list = 'Lupa password,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,';
-        $list = $list.'Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,Panduan Pengajuan Judul Skripsi,';
-        $list = $list.'Pengajuan Judul Skripsi Kembali,Pelayanan Otomasi,';
-        $list = $list.'LIVE CHAT ADMIN,MENU AWAL';
-        $jawab =  "Berikut Layanan Yang tersedia";
-        global_list($sender,$list,"Layanan WALISIADIK",$jawab);
+    // $list = ',';
+    // $jawab =  "Layanan Mahasiswa Akademik";
+    // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
     break;
 }
 ?>
