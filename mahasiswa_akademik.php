@@ -1,11 +1,11 @@
 <?php
 $isipesan = $message = strtolower($isipesan);
-$a = strtolower('Lupa password');
+$a = strtolower('Lupa Password');
 $jawaba = 'Untuk proses reset password, mohon menunggu....
 
 *Dimohon tidak menjawab pesan ini untuk agar dapat segera di proses*';
 
-$b = strtolower('Data nama tidak sesuai');
+$b = strtolower('Data Nama Tidak Sesuai');
 $jawabb = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
@@ -15,7 +15,7 @@ $jawabc = 'Mohon mengirimkan foto *KTP* saudara
 
 *Mohon menunggu jawaban, agar dapat segera diproses*';
 
-$d = strtolower('Transkrip Nilai tidak sesuai');
+$d = strtolower('Transkrip Nilai Tidak Sesuai');
 $jawabd = 'Kami hanya melayani transkrip nilai yang bermasalah, untuk kebutuhan cetak transkrip, silahkan hubungi fakultas.
 
 *Silahkan mengirimkan Transkrip saudara yang bermasalah*';
