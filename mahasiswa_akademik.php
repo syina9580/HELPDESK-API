@@ -95,5 +95,7 @@ global_text($sender,$jawabj);mysqli_query($db, $update);break;
     // $jawab =  "Layanan Mahasiswa Akademik";
     // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
     break;
+        
+        Data contoh
 }
 ?>
