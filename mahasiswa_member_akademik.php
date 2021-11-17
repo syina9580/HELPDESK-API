@@ -88,10 +88,10 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    $list = 'Lupa password,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,';
-        $list = $list.'Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,Panduan Pengajuan Judul Skripsi,';
-        $list = $list.'Pengajuan Judul Skripsi Kembali,Pelayanan Otomasi,';
-        $list = $list.'LIVE CHAT ADMIN,MENU AWAL';
+    $list = 'Lupa password Akademik,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,Transkrip Nilai tidak sesuai,Pengajuan Cuti Mahasiswa,';
+        $list = $list.'Panduan Pengajuan Judul Skripsi,Pengajuan Judul Skripsi Kembali,';
+        $list = $list.'Pelayanan Otomasi,';
+        $list = $list.'Live Chat Admin,Menu Awal';
         $jawab =  "Berikut Layanan Yang tersedia";
         global_list($sender,$list,"Layanan WALISIADIK",$jawab);
     break;
