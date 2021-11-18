@@ -1,11 +1,12 @@
 <?php
 $isipesan = $message = strtolower($isipesan);
-$a = strtolower('Info Pendaftaran Mahasiswa Baru (PMB)');
+$a = strtolower('Info Pendaftaran Mahasiswa Baru (PMB) S1/D3');
 $jawaba = 'Silahkan Kunjungi Laman Resmi Kami di:
 https://pmb.walisongo.ac.id/';
 
-// $b = strtolower('type here');
-// $jawabb = 'type here';
+$b = strtolower('Info Pendaftaran Mahasiswa Baru (PMB) Pasca');
+$jawabb = 'Silahkan Kunjungi Laman Resmi Kami di:
+http://pmb-pasca.walisongo.ac.id/';
 
 // $c = strtolower('Type here');
 // $jawabc = 'type here';
