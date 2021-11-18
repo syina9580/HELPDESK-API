@@ -91,9 +91,10 @@ $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', 
 global_text($sender,$jawabj);mysqli_query($db, $update);break;
 
     default;  // If not CD, all message reply with find book by Topic
-    // $list = ',';
-    // $jawab =  "Layanan Mahasiswa Akademik";
-    // global_list($sender,$list,"Layanan Mahasiswa",$jawab);
+    $list = 'Lupa password/Reset Akun,Data Nama tidak sesuai,Data Tanggal Lahir tidak sesuai,Data Matakuliah tidak sesuai,Presensi Mahasiswa,';
+    $list ='Live Chat Admin,Menu Awal';
+    $jawab =  "Layanan Mahasiswa Akademik";
+    global_list($sender,$list,"Layanan Mahasiswa",$jawab);
     break;
 }
 ?>
