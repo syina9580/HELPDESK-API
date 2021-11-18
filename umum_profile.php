@@ -1,11 +1,12 @@
 <?php
 $isipesan = $message = strtolower($isipesan);
-$a = strtolower('Profile UIN Walisongo');
+$a = strtolower('Website UIN Walisongo');
 $jawaba = 'Silahkan Kunjungi Laman Resmi Kami di:
 https://walisongo.ac.id/';
 
-// $b = strtolower('type here');
-// $jawabb = 'type here';
+$b = strtolower('PPID UIN Walisongo');
+$jawabb = 'Silahkan Kunjungi Laman Resmi Kami di:
+https://ppid.walisongo.ac.id/';
 
 // $c = strtolower('Type here');
 // $jawabc = 'type here';
@@ -40,9 +41,9 @@ case $a;$jawaba;
 $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$a' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
 global_text($sender,$jawaba);mysqli_query($db, $update);break;
 
-// case $b;$jawabb;
-// $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$b' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
-// global_text($sender,$jawabb);mysqli_query($db, $update);break;
+case $b;$jawabb;
+$update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$b' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
+global_text($sender,$jawabb);mysqli_query($db, $update);break;
 
 // case $c;$jawabc;
 // $update = "UPDATE wa_data_answer SET p_last='layanan_mahasiswa', waiting='yes', position='$c' WHERE id='$id'"; //Save Answer to wa_data_answer became to Session
