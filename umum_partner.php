@@ -1,11 +1,12 @@
 <?php
 $isipesan = $message = strtolower($isipesan);
-$a = strtolower('Info Kerja Sama dan Partnersip');
+$a = strtolower('Info Kerjasama dan Partnersip');
 $jawaba = 'Silahkan Kunjungi Laman Resmi Kami di:
-https://walisongo.ac.id/?page_id=10000000008446';
+kerjasama.walisongo.ac.id';
 
-// $b = strtolower('type here');
-// $jawabb = 'type here';
+$b = strtolower('Info Kerjasama Publik');
+$jawabb = 'Silahkan Kunjungi Laman Resmi Kami di:
+https://walisongo.ac.id/?page_id=10000000001462';
 
 // $c = strtolower('Type here');
 // $jawabc = 'type here';
